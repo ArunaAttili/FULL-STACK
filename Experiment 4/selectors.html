@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Selectors Examples</title>
+  <style>
+    /* i. Simple Selectors */
+
+    /* Element selector - all <p> tags */
+    p {
+      color: darkblue;
+    }
+
+    /* ID selector - element with id="unique" */
+    #unique {
+      font-weight: bold;
+      color: darkred;
+    }
+
+    /* Class selector - elements with class="highlight" */
+    .highlight {
+      background-color: yellow;
+    }
+
+    /* Group selector - applies same style to all <h1> and <h2> */
+    h1, h2 {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Universal selector - applies to all elements */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ii. Combinator Selectors */
+
+    /* Descendant selector - any <span> inside <div> */
+    div span {
+      color: green;
+    }
+
+    /* Child selector - only direct <li> children of <ul> */
+    ul > li {
+      list-style-type: square;
+    }
+
+    /* Adjacent sibling selector - <p> immediately after <h2> */
+    h2 + p {
+      margin-top: 0;
+      font-style: italic;
+    }
+
+    /* General sibling selector - all <p> siblings after <h1> */
+    h1 ~ p {
+      color: gray;
+    }
+
+    /* iii. Pseudo-class selector */
+
+    /* Hover state for buttons */
+    button:hover {
+      background-color: lightblue;
+      cursor: pointer;
+    }
+
+    /* First child of its parent */
+    p:first-child {
+      font-weight: bold;
+    }
+
+    /* iv. Pseudo-element selector */
+
+    /* Insert content before all <h2> elements */
+    h2::before {
+      content: "🔹 ";
+      color: purple;
+    }
+
+    /* Style first letter of all paragraphs */
+    p::first-letter {
+      font-size: 200%;
+      color: orange;
+      font-weight: bold;
+    }
+
+    /* v. Attribute selector */
+
+    /* All <a> elements with href attribute */
+    a[href] {
+      text-decoration: none;
+      color: blue;
+    }
+
+    /* <a> with href that starts with https */
+    a[href^="https"] {
+      font-weight: bold;
+    }
+
+    /* <input> elements of type checkbox */
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selectors Demo</h1>
+
+  <!-- Simple Selectors -->
+  <h2>Simple Selectors</h2>
+  <p>This is a paragraph styled with element selector.</p>
+  <p id="unique">This paragraph uses an ID selector.</p>
+  <p class="highlight">This paragraph uses a class selector.</p>
+
+  <!-- Combinator Selectors -->
+  <h2>Combinator Selectors</h2>
+  <div>
+    <span>This span is inside a div (descendant selector).</span>
+  </div>
+  <ul>
+    <li>First child (child selector)</li>
+    <li>Second child</li>
+  </ul>
+  <h2>Heading</h2>
+  <p>This paragraph is immediately after an h2 (adjacent sibling selector).</p>
+  <h1>Big Heading</h1>
+  <p>This paragraph is a general sibling of h1.</p>
+  <p>Another general sibling paragraph.</p>
+
+  <!-- Pseudo-class Selector -->
+  <h2>Pseudo-class Selectors</h2>
+  <button>Hover me!</button>
+  <p>First child paragraph.</p>
+  <p>Second paragraph.</p>
+
+  <!-- Pseudo-element Selector -->
+  <h2>Pseudo-element Selectors</h2>
+  <p>This paragraph has a styled first letter.</p>
+
+  <!-- Attribute Selectors -->
+  <h2>Attribute Selectors</h2>
+  <a href="https://www.google.com">Google (starts with https)</a><br />
+  <a href="http://example.com">Example (normal link)</a><br />
+  <a name="section1">Anchor without href</a><br />
+  <input type="checkbox" /> Checkbox input<br />
+  <input type="text" placeholder="Text input" />
+
+</body>
+</html>
