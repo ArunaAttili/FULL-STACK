@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>User-Defined Object Demo</title>
+</head>
+<body>
+    <h1>User-Defined Object Demo</h1>
+
+    <p id="userOutput"></p>
+
+    <script>
+        // Constructor function
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+
+            // Method to display full name
+            this.getFullName = function() {
+                return this.firstName + " " + this.lastName;
+            };
+
+            // Accessor for age with getter and setter
+            let _age = age;
+            Object.defineProperty(this, "age", {
+                get: function() {
+                    return _age;
+                },
+                set: function(value) {
+                    if(value > 0 && value < 120) {
+                        _age = value;
+                    } else {
+                        alert("Invalid age");
+                    }
+                }
+            });
+        }
+
+        // Create a person object
+        let person1 = new Person("Aruna", "Attili", 22);
+
+        // Update age
+        person1.age = 25;
+
+        let output = `
+            Full Name: ${person1.getFullName()} <br>
+            Age: ${person1.age} <br>
+        `;
+
+        document.getElementById("userOutput").innerHTML = output;
+    </script>
+</body>
+</html>

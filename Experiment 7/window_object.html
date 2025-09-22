@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Window Object Demo</title>
+</head>
+<body>
+    <h1>Window Object Properties & Methods</h1>
+
+    <button onclick="showWindowInfo()">Show Window Info</button>
+
+    <p id="windowInfo"></p>
+
+    <script>
+        function showWindowInfo() {
+            let info = `
+                Window inner width: ${window.innerWidth} px<br>
+                Window inner height: ${window.innerHeight} px<br>
+                Screen width: ${window.screen.width} px<br>
+                Screen height: ${window.screen.height} px<br>
+                URL: ${window.location.href}<br>
+            `;
+            document.getElementById("windowInfo").innerHTML = info;
+
+            // Open a new window (commented to avoid pop-ups)
+            // window.open('https://www.google.com', '_blank');
+        }
+    </script>
+</body>
+</html>

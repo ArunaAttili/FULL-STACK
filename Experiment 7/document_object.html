@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document Object Demo</title>
+</head>
+<body>
+    <h1>Document Object Properties & Methods</h1>
+    <p id="info"></p>
+
+    <script>
+        // Display some document properties
+        let info = `
+            Document URL: ${document.URL} <br>
+            Document Title: ${document.title} <br>
+            Number of Links: ${document.links.length} <br>
+            Number of Images: ${document.images.length} <br>
+        `;
+
+        document.getElementById("info").innerHTML = info;
+
+        // Change document title dynamically
+        document.title = "Updated Document Title";
+    </script>
+</body>
+</html>

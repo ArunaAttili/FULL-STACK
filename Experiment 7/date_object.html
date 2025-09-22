@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Date Object Demo</title>
+</head>
+<body>
+    <h1>Date Object Properties & Methods</h1>
+
+    <p id="dateOutput"></p>
+
+    <script>
+        let now = new Date();
+
+        let output = `
+            Current Date and Time: ${now.toString()} <br>
+            Year: ${now.getFullYear()} <br>
+            Month: ${now.getMonth() + 1} <br>
+            Date: ${now.getDate()} <br>
+            Day of Week: ${now.getDay()} <br>
+            Hours: ${now.getHours()} <br>
+            Minutes: ${now.getMinutes()} <br>
+            Seconds: ${now.getSeconds()} <br>
+            Timestamp (ms since 1970): ${now.getTime()} <br>
+        `;
+
+        document.getElementById("dateOutput").innerHTML = output;
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Array Object Demo</title>
+</head>
+<body>
+    <h1>Array Object Properties & Methods</h1>
+
+    <p id="arrayOutput"></p>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Mango", "Orange"];
+        
+        // Array length
+        let length = fruits.length;
+
+        // Add an element
+        fruits.push("Grapes");
+
+        // Remove first element
+        let first = fruits.shift();
+
+        // Join elements as string
+        let joined = fruits.join(", ");
+
+        let output = `
+            Original array length: ${length}<br>
+            After push & shift operations: ${joined}<br>
+            Removed first element: ${first}
+        `;
+
+        document.getElementById("arrayOutput").innerHTML = output;
+    </script>
+</body>
+</html>

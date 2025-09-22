@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>String Object Demo</title>
+</head>
+<body>
+    <h1>String Object Properties & Methods</h1>
+
+    <p id="stringOutput"></p>
+
+    <script>
+        let text = "Hello, JavaScript World!";
+
+        let output = `
+            Length of string: ${text.length} <br>
+            Uppercase: ${text.toUpperCase()} <br>
+            Lowercase: ${text.toLowerCase()} <br>
+            Includes "JavaScript": ${text.includes("JavaScript")} <br>
+            Substring (7,17): ${text.substring(7,17)} <br>
+            Replace "World" with "Everyone": ${text.replace("World", "Everyone")} <br>
+        `;
+
+        document.getElementById("stringOutput").innerHTML = output;
+    </script>
+</body>
+</html>
