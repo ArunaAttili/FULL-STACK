@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Methods</title>
+</head>
+<body>
+    <h1>Input in JavaScript</h1>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="readInput()">Submit</button>
+
+    <p id="display"></p>
+
+    <script>
+        // 1. Using prompt
+        let userPrompt = prompt("Enter your city:");
+        alert("You entered: " + userPrompt);
+
+        // 2. Using HTML form input (DOM)
+        function readInput() {
+            let name = document.getElementById("nameInput").value;
+            document.getElementById("display").innerHTML = "Hello, " + name + "!";
+        }
+    </script>
+</body>
+</html>
