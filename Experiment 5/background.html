@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Background Image Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Fixed & Tilted Demo</title>
     <style>
         body {
-            height: 2000px; /* to enable scrolling */
+            height: 2000px; /* enable scrolling */
             margin: 0;
-            background: 
-              url('your-image.jpg') no-repeat center calc(50% + 200px);
-            background-attachment: fixed;
-            background-size: 200px 200px;
-            /* Tilt the image using a pseudo-element */
             position: relative;
+            background-color: #f0f0f0; /* optional light background */
         }
 
-        /* Use a pseudo-element to tilt the background image */
+        /* Pseudo-element for tilted background image */
         body::before {
             content: "";
             position: fixed;
@@ -24,16 +20,22 @@
             left: 50%;
             width: 200px;
             height: 200px;
-            background: url('your-image.jpg') no-repeat center;
+            background: url('IMG-20250921-WA0000.jpg') no-repeat center;
             background-size: cover;
             transform: translate(-50%, -50%) rotate(20deg);
             pointer-events: none;
             z-index: -1;
         }
+
+        h1, p {
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
     <h1>Background Image Fixed & Tilted Demo</h1>
-    <p>Scroll the page to see that the tilted image remains fixed halfway down.</p>
+    <p>Scroll the page to see the tilted image remain fixed halfway down.</p>
 </body>
 </html>
